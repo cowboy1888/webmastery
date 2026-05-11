@@ -1,7 +1,7 @@
 #greetings{
   flex: 2.4;
   background-color: transparent; 
-  background-image: url(assets/scroll.png); 
+  background-image: url(../assets/scroll.png); 
   background-size: 100%;
 }
 
