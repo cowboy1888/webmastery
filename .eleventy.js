@@ -1,21 +1,32 @@
 module.exports = function(eleventyConfig) {
   
   // 1. Passthrough File Copy
-  // Tells 11ty to copy these folders to the final build unchanged
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("assets");
 
   // 2. Watch Targets
-  // Tells 11ty to watch for changes in the CSS folder and automatically reload
   eleventyConfig.addWatchTarget("./css/");
 
-  // 3. Return Object
-  // Tells 11ty where to look for your files and where to build them
+  // 3. Add a collection for blog posts
+  eleventyConfig.addCollection("blogPosts", function(collectionApi) {
+    // NOTE: Make sure to change this path to match your actual folder structure!
+    return collectionApi.getFilteredByGlob("path/to/your/blog/posts/*.{html,md}").sort((a, b) => {
+      return b.date - a.date; // Sort in reverse chronological order (newest first)
+    });
+  });
+
+  // 4. Add date filter for RSS
+  eleventyConfig.addFilter("dateToRfc822", function(date) {
+    return new Date(date).toUTCString();
+  });
+
+  // 5. Return Object (MUST BE AT THE VERY BOTTOM)
   return {
     dir: {
-      input: ".",        // "." means the current root folder
-      includes: "_includes", // Where your layouts live
-      output: "_site"    // Where the final website is built
+      input: ".",        
+      includes: "_includes", 
+      output: "_site"    
     }
   };
+  
 };
