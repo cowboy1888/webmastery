@@ -6,6 +6,7 @@
   <title>{{ title | default("Blog") }}</title>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/blog.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,20 +21,20 @@
 
 
     <div class="container">
-      <div class="card">
+      <div class="card options">
         <button onclick="history.back()">Return to Whence You Came</button>
         <ul>
 	  {% for post in collections.blogposts %}
 	    <li>
 	      <a href="{{ post.url }}">{{ post.data.title }}</a> 
-	      <span> - {{ post.date | dateToRfc822 }}</span>
+	      <span> - {{ post.date | mdy }}</span>
 	    </li>
 	  {% endfor %}
         </ul></div>
 
       <div class="card">
-	<h2>{{ date | mdy }}</h2>
-        <h1>{{ title }}</h1>
+	<h2 class="post-date">{{ date | mdy }}</h2>
+        <h1 class="post-title">{{ title }}</h1>
         {{ content | safe }}
       </div>
     </div>
