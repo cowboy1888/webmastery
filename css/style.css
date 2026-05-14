@@ -19,8 +19,8 @@ body {
 
 p {
   font-size: 15px;
+  margin-bottom: 1.5rem; /* This creates the visible line break! */
 }
-
 /* ===== BORDER FRAME ===== */
 .frame {
   max-width: 950px;
