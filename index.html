@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cowboy 1888</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/index.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,10 +78,10 @@
 	<p>TODO</p>
         <ul>
           <li>Individual blog Nunjucks template</li>
-          <li>Fix navigation buttons</li>
+	  <li>About page</li>
           <li>Recent blogpost on index -> blogs page -> actual blogpost</li>
           <li>Cool cursor</li>
-          <li>Audio player</li>
+          <li>Style the audio player</li>
           <li>scroll</li>
           <li>scroll</li>
         </ul>
@@ -111,15 +111,19 @@
       </div>
 
       <div class="container">
-      <div class="card">
-        <h3>Featured Video</h3>
-<iframe 
-  width="100%" 
-  src="https://www.youtube.com/embed/XrpdFmb0EMc?si=fTqK3D9HoakxM5dv" 
-  style="border: none; aspect-ratio: 16 / 9;">
-</iframe>
-      </div>
+        <div class="stacked-cards">
 
+          <div class="card">
+            <h2>Required Reading</h2>
+          </div>
+          <div class="card">
+		<iframe 
+		  width="100%" 
+		  src="https://www.youtube.com/embed/XrpdFmb0EMc?si=fTqK3D9HoakxM5dv" 
+		  style="border: none; aspect-ratio: 16 / 9;">
+		</iframe>
+	  </div>
+	</div>
       <div class="card">
         <h3>"You are not serious people."</h3>
         <i>
@@ -135,18 +139,9 @@
 
     <!-- RIGHT COLUMN -->
     <div class="side-column stacked-cards">
-      <div class="card">
-        <h3>text</h3>
-        <p>blablabla</p>
-      </div>
-
-      <div style="background-color: #593029;">
-          Listening To: lalalalalalalalalalalalalalalalal
-      </div>
-
       <div id="stamps" class="marquee-container">
         <div class="marquee-content">
-	      <img src="../assets/stamps/bisexualnaruto.png" size=4px></img>
+	      <img src="../assets/stamps/bisexualnaruto.png"></img>
 	      <img src="../assets/stamps/asuka.png"></img>
 	      <img src="../assets/stamps/freaks.jpg"></img>
 	      <img src="../assets/stamps/doglover.gif"></img>
@@ -157,7 +152,7 @@
 	      <img src="../assets/stamps/plushies.png"></img>
 
 	      <!-- duplicate for loop -->
-	      <img src="../assets/stamps/bisexualnaruto.png" size=4px></img>
+	      <img src="../assets/stamps/bisexualnaruto.png"></img>
 	      <img src="../assets/stamps/asuka.png"></img>
 	      <img src="../assets/stamps/freaks.jpg"></img>
 	      <img src="../assets/stamps/doglover.gif"></img>
@@ -183,7 +178,30 @@
 	  <img src="../assets/buttons/milktea.gif"></img>
 	</div>
       </div>
+
+
+      <div class="card" style="background-color: #593029;">
+          Listening To:
+	  <div class="marquee-container">
+	  <div class="marquee-content">A Horse With No Name - <i>America</i> - A Horse With No Name - <i>America</i> - </div>
+	  </div>
+
+	    <audio controls>
+	      <source src="assets/audio/a-horse-with-no-name.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+	    </audio>
+      </div>
+
+      <div class="card">
+        <h3>text</h3>
+        <p>blablabla</p>
+      </div>
+
+
+
     </div>
+
+
 
   </div>
 </main>  </div>

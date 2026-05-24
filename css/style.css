@@ -84,16 +84,16 @@ p {
 .nav-button {
   background: none;
   border: none;
-  color: #613d37;
+  color: #3b1117;
   font-family: "Instrument Serif", serif;
-  font-size: 1remd
-  font-style: italic;
+  font-size: 1rem;
   cursor: pointer;
   padding: 0.5rem 0.75rem;
 }
 
 .nav-button:hover {
   color: #f2bfc7;
+  font-style: italic;
 }
 
 .dropdown {
@@ -116,13 +116,15 @@ p {
 .dropdown a {
   display: block;
   padding: 0.4rem 0.9rem;
-  color: #613d37;
+  color: #3b1117;
   text-decoration: none;
 }
 
 .dropdown a:hover {
   color: #f2bfc7;
+  font-style: italic;
 }
+
 
 /* ===== MAIN CONTENT ===== */
 .header-inner {
@@ -178,17 +180,28 @@ p {
 
 .card h3 {
   margin-bottom: 0.5rem;
-  color: #1a1a2e;
+  color: #6e242e;
 }
 
-.card p {
-  color: #666;
+.card h2 {
+  color: #73242f;
 }
+
+p, li {
+  color: #3b1117;
+}
+
 
 /* Custom Scroll Rule */
 .scroll {
   max-height: 100%; /* Keeps it contained inside the stretched middle column height */
   overflow-y: auto; /* Allows scrolling inside if text exceeds the container height */
+}
+
+/* audio */
+audio {
+  display: block;  /* Forces it to its own line */
+  width: 100%;     /* Makes it stretch to fill the card */
 }
 
 /* ---- Marquee ---- */
@@ -283,6 +296,17 @@ p {
 }
 
 @keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
+
+::selection{
+  background: none;
+  color: #f2bfc7;
+}
+
+
