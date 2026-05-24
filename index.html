@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>the castle</title>
+  <title>Cowboy 1888</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
 
@@ -18,7 +18,7 @@
   <div class="frame">
     <!-- ===== HEADER ===== -->
 <header class="site-header">
-  <h1 class="page-title">Castle Coneja</h1>
+  <h1 class="page-title">Cowboy 1888</h1>
   <nav class="navbar">
     <ul class="nav-list">
       <li class="nav-item has-dropdown">
@@ -63,82 +63,130 @@
     </ul>
   </nav>
 </header>
-    <!-- ===== MAIN CONTENT ===== -->
-    <main class="content">
-        <div class="container">
-          <div class="stacked-cards">
-	    <div class="card concave">
-                <h3>Hear Yee, Hear Yee,</h3>
-                <p>blablabla</p>
-            </div>
-	
-            <div class="card scroll">
-              <ul>
-		<li>Individual blog Nunjucks template</li>
-		<li>Blog page CSS</li>
-                <li>Fix navigation buttons</li>
-                <li>Castle room navigation system</li>
-		<li>Recent blogpost on index -> blogs page -> actual blogpost</li>
-		<li>Cool cursor</li>
-		<li>Audio player</li>
-		<li>scroll</li>
-		<li>scroll</li>
-		<li>scroll</li>
-		<li>scroll</li>
-		<li>scroll</li>
-              </ul>
-            </div>
+<!-- ===== MAIN CONTENT ===== -->
+<main class="content">
+  <div class="container">
+    
+    <!-- LEFT COLUMN -->
+    <div class="side-column stacked-cards">
+      <div class="card concave">
+        <h3>Hear Yee, Hear Yee,</h3>
+        <p>Latest blogpost will show up here... one day</p>
+      </div>
 
-          </div>
+      <div id="todo" class="card scroll">
+	<p>TODO</p>
+        <ul>
+          <li>Individual blog Nunjucks template</li>
+          <li>Fix navigation buttons</li>
+          <li>Recent blogpost on index -> blogs page -> actual blogpost</li>
+          <li>Cool cursor</li>
+          <li>Audio player</li>
+          <li>scroll</li>
+          <li>scroll</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MIDDLE COLUMN (The Scroll Column) -->
+    <div class="middle-column stacked-cards scroll">
+
+      <div id="cowboy" class="card">        
+	<h2>
+		1888 was the last year of the Yukon Gold Rush, and the first year after the Great Die Up blizzards. In other words, <i>it was sunset for the great American cowboy.</i>
+	</h2>
+      </div>	    
+      <div id="greetings" class="card">
+        <h2>Greetings, stranger.</h2>
+
+	<p>
+	Welcome to my very own slice of the internet. What else can truly belong to me?</p>
+        <p>
+	  There's this joke people make about engineers and techies, which concludes that the more you know about technology and the internet, the less you want anything to do with it - I've had a disdain for big tech for about as long as I can remember, and yet I find myself working in the tech industry today. I hope that coding here, with HTML, CSS, JS, as if it's 2009 will be my respite. Contradictions make us human.
+	</p>
+
+        <p>
+	  This website is a major WIP. Eventually, if you poke around enough, you'll learn a lot about me.
+	</p>
+      </div>
+
+      <div class="container">
+      <div class="card">
+        <h3>Featured Video</h3>
+<iframe 
+  width="100%" 
+  src="https://www.youtube.com/embed/XrpdFmb0EMc?si=fTqK3D9HoakxM5dv" 
+  style="border: none; aspect-ratio: 16 / 9;">
+</iframe>
+      </div>
+
+      <div class="card">
+        <h3>"You are not serious people."</h3>
+        <i>
+          <p><b>- Logan Roy</b></p>
+          <p>Succession (2019)</p>
+        </i>
+      </div>
+
+      </div>
 
 
-          <div id="greetings" class="card" style="background-color: transparent; background-image: url(assets/scroll.png); background-size: 100%;">
-	    <br>
-            <h2>Greetings, stranger.</h2>
-            <p>
-              My name is Coneja. This is the little castle on the internet I've carved out for myself,
-              because what else can truly belong to me online?
-            </p>
-            <br>
-            <p>
-              Poke around and you'll find all the things that make me, me. My programming projects, art,
-              music, idle thoughts, the works. This site is a huge WIP, as I started it on a whim recently
-              after I got truly sick of doomscrolling, so bear with me!
-            </p>
-          </div>
+    </div>
 
-	<div class="stacked-cards">
-          <div class="card">
-	    <h3>text</h3>
-            <p>blablabla</p>
-	  </div>
+    <!-- RIGHT COLUMN -->
+    <div class="side-column stacked-cards">
+      <div class="card">
+        <h3>text</h3>
+        <p>blablabla</p>
+      </div>
 
+      <div style="background-color: #593029;">
+          Listening To: lalalalalalalalalalalalalalalalal
+      </div>
 
-	  <div class="marquee-container" style="background-color: #593029;">
-	  <div class="marquee-content">
-            Listening To: lalalalalalalalalalalalalalalalal
-	  </div>
-	  </div>
+      <div id="stamps" class="marquee-container">
+        <div class="marquee-content">
+	      <img src="../assets/stamps/bisexualnaruto.png" size=4px></img>
+	      <img src="../assets/stamps/asuka.png"></img>
+	      <img src="../assets/stamps/freaks.jpg"></img>
+	      <img src="../assets/stamps/doglover.gif"></img>
+	      <img src="../assets/stamps/halflife.png"></img>
+	      <img src="../assets/stamps/ohshc.gif"></img>
+	      <img src="../assets/stamps/computersalive.png"></img>
+	      <img src="../assets/stamps/electricangel.gif"></img>
+	      <img src="../assets/stamps/plushies.png"></img>
+
+	      <!-- duplicate for loop -->
+	      <img src="../assets/stamps/bisexualnaruto.png" size=4px></img>
+	      <img src="../assets/stamps/asuka.png"></img>
+	      <img src="../assets/stamps/freaks.jpg"></img>
+	      <img src="../assets/stamps/doglover.gif"></img>
+	      <img src="../assets/stamps/halflife.png"></img>
+	      <img src="../assets/stamps/ohshc.gif"></img>
+	      <img src="../assets/stamps/computersalive.png"></img>
+	      <img src="../assets/stamps/electricangel.gif"></img>
+	      <img src="../assets/stamps/plushies.png"></img>
 	</div>
+      </div>
+      <div class="marquee-container">
+	<div id="buttons" class="marquee-content">
+	  <img src="../assets/buttons/yumenikki.gif"></img>
+	  <img src="../assets/buttons/linux.jpg"></img>
+	  <img src="../assets/buttons/mgs.png"></img>
+	  <img src="../assets/buttons/internetarchive.jpg"></img>
+	  <img src="../assets/buttons/milktea.gif"></img>
 
-        </div>
-	<div class="container">
-	  <div class="card">
-   	    <h3>Featured Video</h3>
-	    <iframe width="320" height="215" src="https://www.youtube.com/embed/u8s6KxLaCzk"></iframe>
-   	  </div>
-
-	  <div class="card">
-	    <h3>"You are not serious people."</h3>
-	    <i>
-	    <p><b>- Logan Roy</b></p>
-	    <p>Succession (2019)</p>
-	    </i>
-	  </div>
+	  <img src="../assets/buttons/yumenikki.gif"></img>
+	  <img src="../assets/buttons/linux.jpg"></img>
+	  <img src="../assets/buttons/mgs.png"></img>
+	  <img src="../assets/buttons/internetarchive.jpg"></img>
+	  <img src="../assets/buttons/milktea.gif"></img>
 	</div>
- 	
-    </main>
+      </div>
+    </div>
+
   </div>
+</main>  </div>
 
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">

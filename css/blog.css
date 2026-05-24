@@ -5,7 +5,7 @@
   max-width: 1200px; /* Expands the total allowed space */
 }
 
-.card .post-date {
+.post-date {
   font-family: "Instrument Serif", serif;
   font-size: 1.2rem;
   font-style: italic;
@@ -13,7 +13,7 @@
   margin-bottom: 0.2rem;
 }
 
-.card .post-title {
+.post-title {
   margin-top: 0;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
@@ -21,7 +21,7 @@
 }
 
 /* Markdown Spacing */
-.card p {
+.middle-column p {
   margin-bottom: 1.5rem;
 }
 
@@ -39,11 +39,11 @@
   margin-bottom: 0.5rem;
 }
 
-.card{
+.middle-column{
   padding-top: 0.5rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-
+  height: fit-content;
 }
 
 .options {
@@ -52,9 +52,19 @@
 }
 
 /* list styles */
-.options ul{
+ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+li{
+  padding-left: .5rem;
+  background-color: white;
+  border: 15px solid transparent;
+  border-image: url("../assets/lace.png") 17 round;
+}
+
+/* link styles TODO*/
+a{
+}

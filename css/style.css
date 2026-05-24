@@ -21,15 +21,15 @@ p {
   font-size: 15px;
   margin-bottom: 1.5rem; /* This creates the visible line break! */
 }
+
 /* ===== BORDER FRAME ===== */
 .frame {
-  max-width: 950px;
+  max-width: 1200px;
   margin: 0 auto;
   background-color: #593029;
-
   border: 15px solid transparent;
   border-image: url("../assets/lace.png") 17 round;
-  min-height: 80vh
+  min-height: 80vh;
 }
 
 /* ===== HEADER ===== */
@@ -40,15 +40,12 @@ p {
   background: transparent;
   box-shadow: none;
   background-color: #593029;
-
   width: 100%;
   padding: 0.5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
-
-
 
 /* ---- Title ---- */
 .page-title {
@@ -89,7 +86,7 @@ p {
   border: none;
   color: #613d37;
   font-family: "Instrument Serif", serif;
-  font-size: 1rem;
+  font-size: 1remd
   font-style: italic;
   cursor: pointer;
   padding: 0.5rem 0.75rem;
@@ -97,7 +94,6 @@ p {
 
 .nav-button:hover {
   color: #f2bfc7;
-
 }
 
 .dropdown {
@@ -128,44 +124,56 @@ p {
   color: #f2bfc7;
 }
 
-
-
 /* ===== MAIN CONTENT ===== */
-
 .header-inner {
   border: 7px solid transparent;
 }
 
 .content {
   padding-top: 1px;
-
 }
 
-/* ===== FLEX LAYOUT ===== */
+/* ===== 3-COLUMN FLEX LAYOUT ===== */
 .container {
-  max-width: 1000px;
+  max-width: 1250px;
   margin: 0 auto;
-  padding-top: .5rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-
+  padding: 0.5rem 1.5rem;
+  
   display: flex;
-  gap: 0.5rem;
-  align-items: flex-start;
+  gap: 1rem;
+  align-items: stretch; /* Forces all columns to stretch to the exact same bottom boundary */
+  height: calc(100vh - 180px); 
+}
+
+/* Side Columns */
+.side-column {
+  flex: .5; 
+  min-width: 200px;
+  background-color: #c2727e; /* Column background stretches to the bottom */
+  padding: 0.5rem;
+}
+
+/* Middle Column */
+.middle-column {
+  flex: 2; /* Spans twice as wide as a side column */
+  background-color: #c2727e; /* Column background stretches to the bottom */
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .stacked-cards {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  /* background-color: #c2727e; <-- REMOVED THIS LINE */
+  gap: 0.5rem;
+  /* Removed height/flex rules here so content doesn't vertically stretch */
 }
 
 /* ---- Content Cards ---- */
 .card {
-  padding: 1.3rem;
-  background-color: #c2727e; /* <-- ADDED IT HERE INSTEAD */
+  padding: 1rem;
+  /* Background color is now handled beautifully by the parent columns, 
+     but cards keep their text formatting and natural heights */
 }
 
 .card h3 {
@@ -177,37 +185,46 @@ p {
   color: #666;
 }
 
-.scroll{
-  max-height: 12rem;
-  overflow-y: auto;
+/* Custom Scroll Rule */
+.scroll {
+  max-height: 100%; /* Keeps it contained inside the stretched middle column height */
+  overflow-y: auto; /* Allows scrolling inside if text exceeds the container height */
 }
 
 /* ---- Marquee ---- */
-
 .marquee-container {
   width: 100%;
-  overflow: hidden;
-  white-space: wrap;
+  overflow: hidden; /* Hides the stamps when they slide off-screen */
   box-sizing: border-box;
+  background-color: transparent; /* Optional styling base */
 }
 
 .marquee-content {
-  display: inline-block;
-  padding-left: 100%;             /* start off-screen */
-  animation: marquee 7s linear infinite;
+  display: flex; /* Forces all images into a strict single horizontal line */
+  width: max-content; /* Allows container to expand past 100% screen width */
+  gap: 5px; /* Puts consistent spacing between your stamps */
+  animation: marquee 15s linear infinite;
 }
 
+/* Give your stamps a consistent size so they slide smoothly */
+.marquee-content img {
+  height: 50px; /* Adjust height to your liking */
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Pauses the sliding animation when a user hovers over the stamps */
 .marquee-container:hover .marquee-content {
   animation-play-state: paused;
-}
-
-/*---- card styles ---- */
+}/*---- card styles ---- */
 .concave {
   background:
     radial-gradient(circle 30px at top left, #0000 98%, #c2727e) top left,
     radial-gradient(circle 30px at top right, #0000 98%, #c2727e) top right,
     radial-gradient(circle 30px at bottom left, #0000 98%, #c2727e) bottom left,
-    radial-gradient(circle 30px at bottom right, #0000 98%,  #c2727e) bottom right;
+    radial-gradient(circle 30px at bottom right, #0000 98%, #c2727e) bottom right;
   background-size: 51% 51%;
   background-repeat: no-repeat;
 }
@@ -231,11 +248,11 @@ p {
   font-style: italic;
 }
 
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .container {
     flex-wrap: wrap;
+    height: auto; /* Allow height to break on small screens */
   }
 
   .stacked-cards,
@@ -265,10 +282,7 @@ p {
   }
 }
 
-
 @keyframes marquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
-
-
