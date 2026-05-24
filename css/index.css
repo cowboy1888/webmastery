@@ -41,5 +41,13 @@
   white-space: nowrap;
 }
 
+#external img{
+	width: 40px;
+	height: auto;
+
+	padding: 3px;
+
+}
+
 #marquee-container{
 }
