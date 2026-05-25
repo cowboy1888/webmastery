@@ -1,4 +1,4 @@
-#webmaster{
-  float: left;
-  flex: 2;
+.container{
+    height: auto;
+    align-items: center; /* Forces all columns to stretch to the exact same bottom boundary */
 }

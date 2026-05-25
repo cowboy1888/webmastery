@@ -242,6 +242,34 @@ audio {
   background-repeat: no-repeat;
 }
 
+/* links */
+
+a:link{
+  color: #3b1117;
+  text-decoration: none;  
+}
+a:visited{
+  color: #3b1117;
+}
+tr a:hover{
+  text-decoration: dashed underline;
+  font-style: italic;
+}
+
+/* table */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Prevents double borders */
+}
+td {
+  border: 1px dashed #6e242e;
+  text-align: left;
+  padding: 3px; /* Gives the cells some breathing room */
+}
+tr:hover {
+  background-color: #f2bfc7; /* Adds a nice hover effect */
+}
+
 /* ---- Fonts ---- */
 .jacquard-24-regular {
   font-family: "Jacquard 24", system-ui;

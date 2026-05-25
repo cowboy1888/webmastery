@@ -8,16 +8,23 @@ module.exports = function(eleventyConfig) {
     return new Date(date).toUTCString();
   });
 
-  // 2. NEW FILTER: Formats date to YY/MM/DD
   eleventyConfig.addFilter("mdy", function(date) {
     const d = new Date(date);
     const year = d.getUTCFullYear().toString(); 
-    const month = String(d.getUTCMonth() + 1).padStart(2, '0'); // Adds leading zero
+    const month = String(d.getUTCMonth() + 1).padStart(2, '0');
     const day = String(d.getUTCDate()).padStart(2, '0');
     return `${month}/${day}/${year}`;
   });
 
   return {
+    // 1. Explicitly tells Eleventy to watch, process, and compile these extensions
+    templateFormats: ["md", "njk", "html"],
+
+    // 2. Tells Eleventy to process HTML files using Nunjucks 
+    // (This links your HTML files to your template engine so changes trigger a rebuild)
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
+
     dir: {
       input: ".",        
       includes: "_includes", 
