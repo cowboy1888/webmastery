@@ -254,6 +254,28 @@ audio {
   mask-size: 51% 51%;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+
+  padding-top: 1.5rem;
+  padding-bottom: -1.5rem;
+}
+
+.concave h3{
+  color:  #d4909a;
+}
+
+.concave p{
+  color: #f2cfc9;
+}
+
+.concave a:link{
+  color: #f2cfc9;
+  font-style: italic;
+  text-decoration: underline;
+  font-size: 1.3rem;
+}
+
+.concave a:visited{
+  color: #f2cfc9;
 }
 
 /* links */
