@@ -231,15 +231,29 @@ audio {
 /* Pauses the sliding animation when a user hovers over the stamps */
 .marquee-container:hover .marquee-content {
   animation-play-state: paused;
-}/*---- card styles ---- */
+}
+
+/*---- card styles ---- */
 .concave {
-  background:
-    radial-gradient(circle 30px at top left, #0000 98%, #c2727e) top left,
-    radial-gradient(circle 30px at top right, #0000 98%, #c2727e) top right,
-    radial-gradient(circle 30px at bottom left, #0000 98%, #c2727e) bottom left,
-    radial-gradient(circle 30px at bottom right, #0000 98%, #c2727e) bottom right;
-  background-size: 51% 51%;
-  background-repeat: no-repeat;
+  background-color: #732f39;
+  
+  /* The "cookie cutter" mask that chops out the corners */
+  -webkit-mask:
+    radial-gradient(circle 30px at top left, #0000 98%, #fff 100%) top left,
+    radial-gradient(circle 30px at top right, #0000 98%, #fff 100%) top right,
+    radial-gradient(circle 30px at bottom left, #0000 98%, #fff 100%) bottom left,
+    radial-gradient(circle 30px at bottom right, #0000 98%, #fff 100%) bottom right;
+  mask:
+    radial-gradient(circle 30px at top left, #0000 98%, #fff 100%) top left,
+    radial-gradient(circle 30px at top right, #0000 98%, #fff 100%) top right,
+    radial-gradient(circle 30px at bottom left, #0000 98%, #fff 100%) bottom left,
+    radial-gradient(circle 30px at bottom right, #0000 98%, #fff 100%) bottom right;
+  
+  /* Ensures the 4 mask quadrants meet perfectly in the middle */
+  -webkit-mask-size: 51% 51%;
+  mask-size: 51% 51%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 /* links */
