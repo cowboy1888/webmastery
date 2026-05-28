@@ -41,13 +41,6 @@
   white-space: nowrap;
 }
 
-#external img{
-	width: 40px;
-	height: auto;
-
-	padding: 3px;
-
-}
 
 #article p{
   font-size: 1.1rem;

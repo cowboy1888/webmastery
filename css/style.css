@@ -296,6 +296,7 @@ tr a:hover{
 table {
     width: 100%;
     border-collapse: collapse; /* Prevents double borders */
+    color: #3b1117;
 }
 td {
   border: 1px dashed #6e242e;
